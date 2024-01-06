@@ -1,0 +1,113 @@
+body {
+    background: linear-gradient(90deg, red, black);
+    color: white;
+    animation: gradientMovement 15s ease infinite;
+    overflow-x: hidden; 
+}
+
+@keyframes gradientMovement {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+.navbar {
+    min-height: 60px;
+
+}
+
+.navbar-brand {
+    font-size: 58px;}
+
+.navbar-nav .nav-link {
+    font-size: 18px;
+
+    padding: 10px 15px;
+
+}
+
+.nav-item {
+    padding: 10px;
+    margin-left: 100px;
+}
+
+.navbar-brand {
+    margin-left: 15px;
+}
+
+h5{
+    text-align: center;
+}
+
+.container{
+ margin-top: 20px;
+}
+
+.tit{
+ text-align: center; 
+ font-size: 40px;
+ margin-top: 20px;
+ color: rgb(14, 237, 14);
+ background-color: black;
+
+}
+
+.info{
+    text-align: center;
+    margin: 0.1px 0;
+}
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    padding-bottom: 196px;
+  }
+
+
+  
+ .tifo-shop-btn {
+    background-color: red;
+    color: black; 
+    padding: 10px 20px ; 
+    border: none; 
+    border-radius: 20px; 
+    cursor: pointer; 
+    font-size: 36px; 
+    text-decoration: none; 
+    display: inline-block; 
+  }
+
+  
+  .tifo-shop-btn:hover {
+    color: white; 
+  }
+
+ 
+  .tifo-shop-btn a {
+    text-decoration: none; 
+    color: inherit; 
+    display: block; 
+    width: 100%; 
+    height: 100%; 
+    line-height: inherit; 
+    text-align: inherit;
+    padding: inherit; 
+  }
+  
+  .footer {
+    background-color: #f8f9fa;
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}

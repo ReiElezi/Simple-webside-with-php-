@@ -1,0 +1,88 @@
+body {
+    background: linear-gradient(90deg, red, black);
+    color: white;
+    animation: gradientMovement 15s ease infinite;
+    overflow-x: hidden; 
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    
+}
+
+@keyframes gradientMovement {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+.navbar {
+    min-height: 100px;
+    padding: 50px;
+}
+
+.navbar-brand {
+    font-size: 58px;
+}
+
+.navbar-nav .nav-link {
+    font-size: 18px;
+    padding: 10px 15px;
+
+}
+
+.nav-item {
+    padding: 10px;
+    margin-left: 100px;
+}
+
+.navbar-brand {
+    margin-left: 15px;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.about-section {
+    padding: 50px 0;
+}
+
+.about-section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+  
+}
+
+.about-section p {
+    font-size: 1.1em;
+    color: #fff;
+}
+
+.footer {
+    background-color: #fff;
+ 
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}

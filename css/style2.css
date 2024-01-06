@@ -1,0 +1,159 @@
+body {
+    background: linear-gradient(90deg, red, black);
+    /* Red to black gradient background */
+    color: white;
+    animation: gradientMovement 15s ease infinite;
+    overflow-x: hidden; 
+}
+
+@keyframes gradientMovement {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+.navbar {
+    min-height: 60px;
+
+}
+
+.navbar-brand {
+    font-size: 58px;
+    /* Increase the font size of the navbar brand */
+}
+
+.navbar-nav .nav-link {
+    font-size: 18px;
+    /* Adjust the font size of the navbar links */
+    padding: 10px 15px;
+    /* Add padding to the navbar links */
+}
+
+.nav-item {
+    padding: 10px;
+    margin-left: 100px;
+}
+
+.navbar-brand {
+    margin-left: 15px;
+}
+
+.category {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+  }
+
+  .content {
+    height: 100%;
+    min-height: 100vh;
+    /* margin-top: 20px;  */
+    /* Adjust this value as needed */
+}
+
+.ticket-form {
+    display: none; /* Initially hiding the form */
+    margin-top: 20px;
+}
+.category {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin-bottom: 20px;
+    position: relative; /* Added positioning for proper form placement */
+}
+.category img {
+    width: 100%; /* Adjust image width as needed */
+    height: 300px; /* Maintain aspect ratio */
+    position: relative;
+    display: block;
+}
+.category .vip-text {
+    position: absolute;
+    top: 10px; /* Adjust text position from top */
+    left: 30px; /* Adjust text position from left */
+    color: white; /* Text color */
+    font-weight: bold;
+    font-size: 24px; /* Adjust font size */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Optional text shadow */
+    
+}
+.read-more-btn {
+    display: block;
+    margin-top: 10px; /* Adjust the space between the image and button */
+}
+
+   /* Apply the Google Font to the class */
+   .material-symbols-outlined {
+    font-family: 'Material Symbols Outlined', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    vertical-align: middle;
+    margin-right: 5px; /* Adding space between icon and text */
+}
+
+/* Optional: Additional styling for the button */
+.toggle-map-button {
+    display: block;
+            margin: 0 auto;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #008000;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            width: 300px; /* Set a specific width for the button */
+            text-align: center;
+  
+
+ 
+}
+
+
+footer {
+    background-color: #f8f9fa;
+    height: 50px;
+    text-align: center;
+    position: relative;
+    
+    width: 100%;
+    margin-top:50px;
+}
+
+.read-more-btn{
+    background-color: black;
+    display: block;
+    margin: auto;
+    color: white;
+    border-radius:10px ;
+    padding: 0 20px; 
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+
+.material-symbols-outlined {
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24;
+}
+
+.btn-primary{
+    display: block;
+    margin: 0 auto;
+    color: white;
+    background-color: red;
+    border: none;
+}

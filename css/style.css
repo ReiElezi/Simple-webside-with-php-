@@ -1,0 +1,115 @@
+body {
+    background: linear-gradient(90deg, red, black);
+    color: white;
+    animation: gradientMovement 15s ease infinite;
+    overflow-x: hidden;
+}
+
+@keyframes gradientMovement {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+
+.navbar {
+    min-height: 100px;
+    padding: 50px;
+}
+
+.navbar-brand {
+    font-size: 58px;
+}
+
+.navbar-nav .nav-link {
+    font-size: 18px;
+    padding: 10px 15px;
+
+}
+
+.nav-item {
+    padding: 10px;
+    margin-left: 100px;
+}
+
+.navbar-brand {
+    margin-left: 15px;
+}
+
+.team-content {
+    display: none;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    margin-top: 20px;
+    color: white;
+}
+
+.container {
+    border: 5px solid white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-image: url('css\kombetarja-shqiperi.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    opacity: 0.7;
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+    max-width: 100%; /* Përmbajtja nuk do të tejkalonte gjerësinë e ekranit */
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+
+
+.photo-container {
+    padding: 15px;
+
+
+}
+
+.photo-container img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    padding: 30px;
+
+}
+
+.footer {
+    background-color: #f8f9fa;
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.q {
+    color: #f8f9fa;
+    padding-left: 30px;
+}
+
+#btn  {
+    background-color: #000; /* Ngjyra e sfondit (ngjyra e zeze) */
+    color: #fff; /* Ngjyra e shkrimit (bardhë në këtë rast për kontrast) */
+    padding: 10px 20px; /* Përshtatni madhësinë e brendshme të butonit */
+    border-radius: 5px; /* Ndryshoni formën e butonit në një katrore ose të rrumbullakët */
+    font-size: 16px;
+
+}
