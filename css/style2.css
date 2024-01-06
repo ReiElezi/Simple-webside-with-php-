@@ -154,6 +154,13 @@ footer {
     display: block;
     margin: 0 auto;
     color: white;
-    background-color: red;
+    background-color: rgb(0, 0, 0);
+    border: none;
+}
+.btn-primary:hover{
+    display: block;
+    margin: 0 auto;
+    color: white;
+    background-color: rgb(255, 0, 0);
     border: none;
 }

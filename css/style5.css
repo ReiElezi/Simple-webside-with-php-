@@ -86,3 +86,15 @@ header {
     bottom: 0;
     width: 100%;
 }
+
+.about-section {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.column {
+    flex: 1;
+    max-width: 45%; /* Përshtatni këtë vlerë sipas preferencave tuaja */
+    margin-bottom: 20px;
+}
