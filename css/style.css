@@ -122,3 +122,11 @@ body {
     border: none;
 
 }
+.img1{
+width: 100px;
+ border-radius: 100%;
+}
+
+.color1{
+    color: red;
+}

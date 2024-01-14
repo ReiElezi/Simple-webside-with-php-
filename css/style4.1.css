@@ -118,3 +118,18 @@ color: #fff;
     font-size: 24px;
     color: #555;
 }
+
+.img1{
+    width: 100px; 
+    border-radius: 100%;
+}
+#active{
+   color: red;
+}
+#categori{
+    max-width: 1024px; 
+    margin: auto;
+}
+.img2{
+  height: 200px;
+}

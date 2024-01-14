@@ -164,3 +164,17 @@ footer {
     background-color: rgb(255, 0, 0);
     border: none;
 }
+.img1{
+    width: 100px;
+     border-radius: 100%;
+}
+.color1{
+    color: red;
+}
+.span1{
+   font-size: 20px; 
+   font-weight: bold;
+}
+.pstyle{
+    display: none;
+}

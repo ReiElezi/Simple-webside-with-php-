@@ -108,4 +108,23 @@ body {
     cursor: pointer;
   }
 
-  
+.span1{
+   font-size: 25px; 
+   margin-left: 180px; 
+   color: gray;
+}
+
+#button1{
+    background-color: white;
+     border: none;
+}
+.img2{
+   width: 200px;
+}
+.img1{
+   width: 100px;
+    border-radius: 100%;
+}
+.a1{
+   color: red;
+}
