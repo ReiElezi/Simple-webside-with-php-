@@ -365,4 +365,37 @@
     }
   }, 20);
 }
+
+document.addEventListener('DOMContentLoaded', function () {
+            // Fetch hotel data from the PHP script
+            fetch('get_hotels.php')
+                .then(response => response.json())
+                .then(data => {
+                    // Render hotel cards on the page
+                    const hotelsContainer = document.getElementById('hotels');
+                    data.forEach(hotel => {
+                        const hotelCard = createHotelCard(hotel);
+                        hotelsContainer.appendChild(hotelCard);
+                    });
+                });
+        });
+
+        function createHotelCard(hotel) {
+            const card = document.createElement('div');
+            card.classList.add('col-md-4');
+
+            card.innerHTML = `
+                <div class="card hotel-card">
+                    <img src="${hotel.image_path}" class="card-img-top" alt="${hotel.name}">
+                    <div class="card-body">
+                        <h5 class="card-title">${hotel.name}</h5>
+                        <p class="card-text">${hotel.description}</p>
+                        <a href="#" class="btn btn-success">Book Now</a>
+                        <span class="span1"><b>${hotel.price}€</b></span>
+                    </div>
+                </div>
+            `;
+
+            return card;
+        }
 </script>
