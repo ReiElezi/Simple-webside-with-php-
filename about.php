@@ -6,44 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css\style5.css">
     <title>About</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
 
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">
-            <img style="width: 100px; border-radius: 100%;" src="img/logo.png" alt="Logo">
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="home.html">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="ticket.html">Tickets</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="hotels.html">Hotels</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="tifogrup.html">TifoGrups</a>
-                </li>
-                <li class="nav-item">
-                    <a style="color: red;" class="nav-link" href="about.html">About</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-
-
+    <?php include('/laragon/www/atc_project/components/nav.php') ?>
     <header>
         <h1>About Us</h1>
     </header>
@@ -56,27 +26,22 @@
                 immense enthusiasm and excitement among fellow fans. Witnessing the fervor and support for the team, Rei
                 envisioned a platform that would serve as a hub for these passionate supporters.</p>
 
-            <p> Recognizing the upcoming Euro 2024 tournament as a momentous event for Albanian football, Rei was
+            <p>Recognizing the upcoming Euro 2024 tournament as a momentous event for Albanian football, Rei was
                 determined to create a space that would not only facilitate the journey of fans but also enhance their
                 experience during this prestigious tournament. With a goal to provide comprehensive information, travel
                 guidance, and an engaging platform for fans to celebrate their team, the idea for this website was born.
             </p>
 
-            <p> Driven by an unwavering commitment to the cause, Rei worked tirelessly and collaborated with a team of
+            <p>Driven by an unwavering commitment to the cause, Rei worked tirelessly and collaborated with a team of
                 enthusiasts, developers, and designers. Within a remarkably short span of three days, this website came
                 to life, offering a one-stop destination for Albanian national team fans, enabling them to access
                 valuable resources, travel tips, match schedules, and more.</p>
 
-            <p> The essence of this platform lies in its dedication to the fans, embodying the spirit of unity, passion,
+            <p>The essence of this platform lies in its dedication to the fans, embodying the spirit of unity, passion,
                 and celebration of Albanian football. Through Rei's vision and the collective efforts of everyone
                 involved, this website stands as a testament to the unwavering support and love for the national team,
                 aiming to make Euro 2024 an unforgettable and joyous experience for all Albanian supporters.</p>
-
-
         </div>
-
-        <!-- You can add more sections or content as needed -->
-
         <div class="about-section">
             <div class="column">
                 <h2>History</h2>
@@ -115,13 +80,9 @@
                 </p>
             </div>
         </div>
-
-
     </div>
     </div>
-    <footer class="footer">
-        <p>&copy; 2024 YourWebsite.com | All rights reserved.</p>
-    </footer>
+    <?php include('/laragon/www/atc_project/components/footer.php') ?>
 </body>
 
 </html>

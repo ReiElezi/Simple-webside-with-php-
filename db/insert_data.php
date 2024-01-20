@@ -12,36 +12,55 @@ if (!$conn) {
 }
 
 // // Insert into users
-// INSERT INTO users (id, firstName, lastName, email, password, role) 
-//         VALUES (1, 'Rei', 'Elezi', 'elezirei8@gmail.com', 'password123', 'Admin'),
-//                (2, 'Klaudia', 'Elezi', 'eleziklaudia8@gmail.com', 'password456', 'User'),
-//                (3, 'Artan', 'Elezi', 'eleziartan8@gmail.com', 'password789', 'User')";
+// create an user for admin
+$password = password_hash('admin', PASSWORD_DEFAULT); // hash password
+$sql = "INSERT INTO users (firstName, lastName, email, password, role) VALUES ('Rei','Elezi' ,'rei@gmail.com', '$password', 'admin');";
 
-// -- Insert sample data into the 'products' table
-$sql = "INSERT INTO products (name, description, price, image_url, category) VALUES
-('Qeleshe', 'Traditional Albanian hat', 20.00, 'img/qeleshe.jpeg', 'others'),
-('Kapele', 'Another traditional item', 5.00, 'img/kapele.jpg', 'others'),
-('Shall kuq e zi', 'Red and black scarf', 12.00, 'img/shall.jpeg', 'others'),
-('Stampa', 'Traditional stamp', 8.00, 'img/stamp.jpeg', 'others'),
-('Fanella 2016', 'Albanian flag t-shirt', 50.00, 'img/fanella.jpg', 'clothing'),
-('Fanella 2014', 'Another Albanian flag t-shirt', 50.00, 'img/bluz2.jpeg', 'clothing'),
-('Fanella 2017', 'Yet another Albanian flag t-shirt', 50.00, 'img/bluz4.jpg', 'clothing'),
-('Hodie me Shqiponje', 'Eagle hoodie', 50.00, 'img/bluz5.jpeg', 'clothing'),
-('Hodie i zi me Shqiponje', 'Black hoodie with eagle', 50.00, 'img/bluz6.webp', 'clothing')";
+// // -- Insert sample data into the 'products' table
+$sql .= "INSERT INTO products (name, description, price, image_url, category) VALUES ('Qeleshe', 'Traditional Albanian hat', '20.00', 'qeleshe.jpeg', 'others');";
+$sql .= "INSERT INTO products (name, description, price, image_url, category) VALUES ('Kapele', 'Another traditional item', '5.00', 'kapele.jpg', 'others');";
+$sql .= "INSERT INTO products (name, description, price, image_url, category) VALUES ('Shall kuq e zi', 'Red and black scarf', '12.00', 'shall.jpeg', 'others');";
+$sql .= "INSERT INTO products (name, description, price, image_url, category) VALUES ('Stampa', 'Traditional stamp', '8.00', 'stamp.jpeg', 'others');";
+$sql .= "INSERT INTO products (name, description, price, image_url, category) VALUES ('Fanella 2016', 'Albanian flag t-shirt',' 50.00', 'fanella.jpg', 'clothing');";
+$sql .= "INSERT INTO products (name, description, price, image_url, category) VALUES ('Fanella 2014', 'Another Albanian flag t-shirt', '50.00', 'bluz2.jpeg', 'clothing');";
+$sql .= "INSERT INTO products (name, description, price, image_url, category) VALUES ('Fanella 2017', 'Yet another Albanian flag t-shirt', '50.00', 'bluz4.jpg', 'clothing');";
+$sql .= "INSERT INTO products (name, description, price, image_url, category) VALUES ('Hodie me Shqiponje', 'Eagle hoodie', '50.00', 'bluz5.jpeg', 'clothing');";
+$sql .= "INSERT INTO products (name, description, price, image_url, category) VALUES ('Hodie i zi me Shqiponje', 'Black hoodie with eagle', '50.00', 'bluz6.webp', 'clothing');";
 
-// -- Create the 'users' table (if needed for user-related features)
-// CREATE TABLE users (
-//     id INT AUTO_INCREMENT PRIMARY KEY,
-//     username VARCHAR(50) NOT NULL,
-//     email VARCHAR(100) NOT NULL,
-//     password VARCHAR(255) NOT NULL
-// );
+$sql .= "INSERT INTO hotels (name, description, price, image_path) VALUES
+('Hilton Frankfurt City Centre', 'Description of the hotel. Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 500, 'hotel1.jpg');";
+$sql .= "INSERT INTO hotels (name, description, price, image_path) VALUES
+('Hilton Garden Inn Frankfurt City Centre', 'Description of the hotel. Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 300, 'hotel2.jpeg');";
+$sql .= "INSERT INTO hotels (name, description, price, image_path) VALUES
+('Hotel Name 3', 'Description of the hotel. Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 850, 'hotel3.jpg');";
+$sql .= "INSERT INTO hotels (name, description, price, image_path) VALUES
+('Hilton Mainz', 'Description of the hotel. Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 600, 'hotel4.jpg');";
+$sql .= "INSERT INTO hotels (name, description, price, image_path) VALUES
+('Atlantis House', 'Description of the hotel. Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 590, 'hotel5.jpg');";
+$sql .= "INSERT INTO hotels (name, description, price, image_path) VALUES
+('Cecilienhof, Potsdam', 'Description of the hotel. Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 430, 'hotel6.jpeg');";
+$sql .= "INSERT INTO hotels (name, description, price, image_path) VALUES
+('Dom-Hotel, Cologne', 'Description of the hotel. Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 50, 'h7.jpg');";
+$sql .= "INSERT INTO hotels (name, description, price, image_path) VALUES
+('Hotel Nassauer Hof', 'Description of the hotel. Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 47, 'h8.jpg');";
+$sql .= "INSERT INTO hotels (name, description, price, image_path) VALUES
+('Hotel Nikko Düsseldorf, Düsseldorf', 'Description of the hotel. Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 100, 'h9.jpg');";
+$sql .= "INSERT INTO hotels (name, description, price, image_path) VALUES
+('Hotel Petersberg, Near Bonn', 'Description of the hotel. Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 90, 'h7.jpg');";
+$sql .= "INSERT INTO hotels (name, description, price, image_path) VALUES
+('Zum Schwan', 'Description of the hotel. Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 59, 'h8.jpg');";
+$sql .= "INSERT INTO hotels (name, description, price, image_path) VALUES
+('Schloss Elmau', 'Description of the hotel. Lorem ipsum dolor sit amet, consectetur adipiscing elit.', 99, 'h9.jpg');";
 
-if (mysqli_query($conn, $sql)) {
-    echo "Records inserted successfully";
+$sql .= "INSERT INTO tickets_info (category, price, description) VALUES ('Vip', 200.00, 'A1,A2 sector');";
+$sql .= "INSERT INTO tickets_info (category, price, description) VALUES ('Normal', 100.00, 'B1,B2 sector');";
+$sql .= "INSERT INTO tickets_info (category, price, description) VALUES ('Basic', 30.00, 'C1,C2,C3 sector');";
+
+if (mysqli_multi_query($conn, $sql)) {
+    echo "New records created successfully";
 } else {
     echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-}
+}  
 
 mysqli_close($conn);
 ?>

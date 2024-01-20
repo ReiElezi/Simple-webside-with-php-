@@ -16,34 +16,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">
-            <img class="img1" src="img/logo.png" alt="Logo">
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item active">
-                    <a  class="nav-link" href="home.html">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="ticket.html">Tickets</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="hotels.html">Hotels</a>
-                </li>
-                <li class="nav-item">
-                    <a  id="a1" class="nav-link a1" href="#">TifoGrups</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="about.html">About</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
+  <?php include('/laragon/www/atc_project/components/nav.php'); ?>
 
     <h1 class="tit">Albania Euro 2024  Jorney</h1>
 
@@ -94,7 +67,7 @@
         </div>
       </div>
       <div class="button-container">
-        <button class="tifo-shop-btn"><a href="tifogrup2.html">Go to TifoShop</a></button>
+        <button class="tifo-shop-btn"><a href="tifogrup2.php">Go to TifoShop</a></button>
       </div>
 
       <footer class="footer">
