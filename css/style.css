@@ -76,7 +76,8 @@ body {
     max-width: 800px;
     margin: 0 auto;
     overflow: hidden;
-    max-width: 100%; /* Përmbajtja nuk do të tejkalonte gjerësinë e ekranit */
+    max-width: 100%;
+    /* Përmbajtja nuk do të tejkalonte gjerësinë e ekranit */
     padding-right: 15px;
     padding-left: 15px;
     margin-right: auto;
@@ -113,20 +114,24 @@ body {
     padding-left: 30px;
 }
 
-#btn  {
+#btn {
     background-color: #000;
-    color: #fff; 
+    color: #fff;
     padding: 10px 20px;
-    border-radius: 5px; 
+    border-radius: 5px;
     font-size: 16px;
     border: none;
 
 }
-.img1{
-width: 100px;
- border-radius: 100%;
+
+.img1 {
+    width: 100px;
+    border-radius: 100%;
 }
 
-.color1{
+.color1 {
     color: red;
 }
+
+
+

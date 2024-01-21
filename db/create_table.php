@@ -49,6 +49,8 @@ $sql_create_table_products = "CREATE TABLE products (
     category VARCHAR(50) NOT NULL
 )";
 
+
+
 if (mysqli_query($conn, $sql_create_table_products)) {
     echo "Tabela products u krijua me sukses";
 } else {
@@ -68,5 +70,22 @@ if (mysqli_query($conn, $sql_create_table_tickets_info)) {
     echo "Tabela tickets_info pati nje proble <br> " . mysqli_error($conn);
 }
 
+$sql_tickets_order = "CREATE TABLE IF NOT EXISTS tickets_order (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    surname VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    creditCard VARCHAR(16) NOT NULL,
+    numTickets INT NOT NULL
+)"; 
+if (mysqli_query($conn, $sql_tickets_order)) {
+    echo "Tabela tickets_order u krijua me sukses";
+} else {
+    echo "Tabela tickets_order pati nje proble <br> " . mysqli_error($conn);
+}
+
+
 mysqli_close($conn);
 ?>
+
+

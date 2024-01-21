@@ -1,0 +1,52 @@
+body{
+    background: rgb(95,64,64);
+    background: linear-gradient(90deg, rgba(95,64,64,1) 13%, rgba(121,9,9,1) 54%, rgba(114,87,90,1) 95%);
+color: white;
+}
+
+
+#button{
+margin-left: 300px;
+    }
+
+
+    .material-symbols-outlined {
+        font-family: 'Material Symbols Outlined';
+        font-variation-settings:
+          'FILL' 0,
+          'wght' 400,
+          'GRAD' 0,
+          'opsz' 24;
+          text-decoration: none; 
+          color: white;
+         
+          /* margin-bottom: -5px; */
+
+      }
+
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+
+.material-symbols-outlined-red {
+  font-variation-settings:
+  'FILL' red,
+  'wght' 500,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+

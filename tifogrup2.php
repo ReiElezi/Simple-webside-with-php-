@@ -1,3 +1,15 @@
+<?php
+include('/laragon/www/atc_project/connectWithDB.php');
+
+// Fetch tickets data from the database
+$select_products= "SELECT id, name, description,price,image_url, category FROM products WHERE category = 'others'" ;
+$products = mysqli_query($conn, $select_products);
+
+
+if (!$products) {
+    die("Error: " . mysqli_error($conn));
+}
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -18,8 +30,10 @@
 </head>
 
 <body>
-    <?php include('/laragon/www/atc_project/components/nav.php'); ?>
+    
 
+
+<?php include('/laragon/www/atc_project/components/nav.php') ?>
     <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container justify-content-center">
        
@@ -57,201 +71,54 @@
         </div>
     </div>
 
-    <div class="category others" id="categori">
+    <div class="category others" id="<?php echo $product['category']; ?>">
         <div class="row">
+        <?php while ($product = mysqli_fetch_assoc($products)) : ?>
             <!-- <div class="container"> -->
             <div class="col-sm-6 col-md-4 d-flex justify-content-center">
                 <div class="product position-relative">
-                    <img class="img2" src="img/alb.flag.png" alt="flamur">
+                    <img class="img2" src="img/<?php echo $product['image_url']; ?>" alt="flamur">
                     <div class="product-info">
-                        <h5>Qeleshe</h5>
-                        <h6>$20</h6>
+                        <h5><?php echo $product['name']; ?></h5>
+                        <h6> <?php echo $product['price']; ?></h6>
                         <button class="btn btn-dark" onclick="buyOthers()">Buy Now</button>
                     </div>
                 </div>
             </div>
-            <div class="col-sm-6 col-md-4 d-flex justify-content-center">
-                <div class="product position-relative">
-                    <img src="img/qeleshe.jpeg" alt="flamur">
-                    <div class="product-info">
-                        <h5>Qeleshe</h5>
-                        <h6>$20</h6>
-                        <button class="btn btn-dark" onclick="buyOthers()">Buy Now</button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6 col-md-4 d-flex justify-content-center">
-                <div class="product position-relative">
-                    <img src="img/kapele.jpg" alt="flamur">
-                    <div class="product-info">
-                        <h5>Kapele</h5>
-                        <h6>$5</h6>
-                        <button class="btn btn-dark" onclick="buyOthers()">Buy Now</button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6 col-md-4 d-flex justify-content-center">
-                <div class="product position-relative">
-                    <img style="height: 180px;" src="img/ss.png" alt="flamur">
-                    <div class="product-info">
-                        <h5>Kopsa</h5>
-                        <h6>$3</h6>
-                        <button class="btn btn-dark" onclick="buyOthers()">Buy Now</button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6 col-md-4 d-flex justify-content-center">
-                <div class="product position-relative">
-                    <img src="img/shall.jpeg" alt="flamur">
-                    <div class="product-info">
-                        <h5>Shall kuq e zi</h5>
-                        <h6>$12</h6>
-                        <button class="btn btn-dark" onclick="buyOthers()">Buy Now</button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6 col-md-4 d-flex justify-content-center">
-                <div class="product position-relative">
-                    <img src="img/stamp.jpeg" alt="flamur">
-                    <div class="product-info">
-                        <h5>Stampa</h5>
-                        <h6>$8</h6>
-                        <button class="btn btn-dark" onclick="buyOthers()">Buy Now</button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6 col-md-4 d-flex justify-content-center">
-                <div class="product position-relative">
-                    <img style="height: 180px;" src="img/ss.png" alt="flamur">
-                    <div class="product-info">
-                        <h5>Kopsa</h5>
-                        <h6>$3</h6>
-                        <button class="btn btn-dark" onclick="buyOthers()">Buy Now</button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6 col-md-4 d-flex justify-content-center">
-                <div class="product position-relative">
-                    <img src="img/shall.jpeg" alt="flamur">
-                    <div class="product-info">
-                        <h5>Shall kuq e zi</h5>
-                        <h6>$12</h6>
-                        <button class="btn btn-dark" onclick="buyOthers()">Buy Now</button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6 col-md-4 d-flex justify-content-center">
-                <div class="product position-relative">
-                    <img src="img/stamp.jpeg" alt="flamur">
-                    <div class="product-info">
-                        <h5>Stampa</h5>
-                        <h6>$8</h6>
-                        <button class="btn btn-dark" onclick="buyOthers()">Buy Now</button>
-                    </div>
-                </div>
-            </div>
+            <?php endwhile; ?>
 
+ 
             <!-- </div> -->
         </div>
 
     </div>
 
 
-    <div class="category clothing" style="max-width: 1024px; margin: auto;">
-        <div class="row">
-            <!-- Products in 'Clothing' category -->
-            <div class="row">
-                <!-- Products in 'All' category -->
-                <div class="col-sm-6 col-md-4 d-flex justify-content-center">
-                    <div class="product position-relative">
-                        <img src="img/fanella.jpg" alt="Product 1">
-                        <div class="product-info">
-                            <h5>Fanella 2016</h5>
-                            <h6>$50</h6>
-                            <button class="btn btn-dark" onclick="toggleForm()">Buy Now</button>
-                        </div>
+   <div class="category clothing" style="max-width: 1024px; margin: auto;">
+    <div class="row">
+        <?php
+        $select_clothing_products = "SELECT id, name, description, price, image_url, category FROM products WHERE category = 'clothing'";
+        $clothing_products = mysqli_query($conn, $select_clothing_products);
+
+        if (!$clothing_products) {
+            die("Error: " . mysqli_error($conn));
+        }
+
+        while ($product = mysqli_fetch_assoc($clothing_products)) :
+        ?>
+            <div class="col-sm-6 col-md-4 d-flex justify-content-center">
+                <div class="product position-relative">
+                    <img src="img/<?php echo $product['image_url']; ?>" alt="<?php echo $product['name']; ?>">
+                    <div class="product-info">
+                        <h5><?php echo $product['name']; ?></h5>
+                        <h6>$<?php echo $product['price']; ?></h6>
+                        <button class="btn btn-dark" onclick="toggleForm()">Buy Now</button>
                     </div>
                 </div>
-                <div class="col-sm-6 col-md-4 d-flex justify-content-center">
-                    <div class="product position-relative">
-                        <img src="img/bluz2.jpeg" alt="Product 1">
-                        <div class="product-info">
-                            <h5>Fanella 2014</h5>
-                            <h6>$50</h6>
-                            <button class="btn btn-dark " onclick="toggleForm()">Buy Now</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-4 d-flex justify-content-center">
-                    <div class="product position-relative">
-                        <img src="img/fanella.jpg" alt="Product 1">
-                        <div class="product-info">
-                            <h5>Fanella 2016</h5>
-                            <h6>$50</h6>
-                            <button class="btn btn-dark" onclick="toggleForm()">Buy Now</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-4 d-flex justify-content-center">
-                    <div class="product position-relative">
-                        <img src="img/bluz4.jpg" alt="Product 1">
-                        <div class="product-info">
-                            <h5>Fanella 2017</h5>
-                            <h6>$50</h6>
-                            <button class="btn btn-dark" onclick="toggleForm()">Buy Now</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-4 d-flex justify-content-center">
-                    <div class="product position-relative">
-                        <img src="img/bluz5.jpeg" alt="Product 1">
-                        <div class="product-info">
-                            <h5>Hodie me Shqiponje</h5>
-                            <h6>$50</h6>
-                            <button class="btn btn-dark" onclick="toggleForm()">Buy Now</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-4 d-flex justify-content-center">
-                    <div class="product position-relative">
-                        <img src="img/bluz6.webp" alt="Product 1">
-                        <div class="product-info">
-                            <h5>Hodie i zi me Shqiponje</h5>
-                            <h6>$50</h6>
-                            <button class="btn btn-dark" onclick="toggleForm()">Buy Now</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-4 d-flex justify-content-center">
-                    <div class="product position-relative">
-                        <img src="img/fanella.jpg" alt="Product 1">
-                        <div class="product-info">
-                            <h5>Fanella 2016</h5>
-                            <h6>$50</h6>
-                            <button class="btn btn-dark" onclick="toggleForm()">Buy Now</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-4 d-flex justify-content-center">
-                    <div class="product position-relative">
-                        <img src="img/qeleshe.jpeg" alt="Product 1">
-                        <div class="product-info">
-                            <h5>Qeleshe</h5>
-                            <h6>$50</h6>
-                            <button class="btn btn-dark" onclick="toggleForm()">Buy Now</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-4 d-flex justify-content-center">
-                    <div class="product position-relative">
-                        <img src="img/fanella.jpg" alt="Product 1">
-                        <div class="product-info">
-                            <h5>Fanella 2016</h5>
-                            <h6>$50</h6>
-                            <button class="btn btn-dark" onclick="toggleForm()">Buy Now</button>
-                        </div>
-                    </div>
-                </div>
+            </div>
+        <?php endwhile; ?>
+    </div>
+</div>  
                 <!-- Add more categories as needed -->
             </div>
 
@@ -296,11 +163,8 @@
                 </form>
             </div>
 
-            <footer class="footer">
-                <div class="rei">
-                    <p>&copy; 2023 YourWebsite.com</p>
-                </div>
-            </footer>
+            <?php include('/laragon/www/atc_project/components/footer.php'); ?>
+
 </body>
 
 </html>

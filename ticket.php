@@ -46,7 +46,7 @@ if (!$tickets) {
                             <span class="material-symbols-outlined">&#xe53f;</span>
                         </button>
                         <div id="ticketForm-<?php echo $ticket['id']; ?>" class="ticket-form">
-                            <form action="process_ticket.php" method="post">
+                            <form action="ticket_order.php" method="post">
                                 <div class="form-group">
                                     <label for="name">Name</label>
                                     <input type="text" class="form-control" id="name" name="name">
